@@ -1,0 +1,8 @@
+apiVersion: metallb.io/v1alpha1
+kind: AddressPool
+metadata:
+  namespace: metallb-system
+spec:
+  protocol: layer2
+  addresses:
+  - 101.202.63.12-101.202.63.13

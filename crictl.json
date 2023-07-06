@@ -1,0 +1,8 @@
+{
+  "metadata": {
+    "name": "my-container"
+  },
+  "image": {
+    "image": "docker.io/junisduck/image_test:latest"
+  }
+}
