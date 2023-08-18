@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ooo
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: ooo
@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
         - name: ooo-app
-          #image: nginx
-          image: 'junisduck/image_test:junisduck-latest'
+          image: nginx
+          #image: 'junisduck/image_test:junisduck-latest'
           ports:
-            - containerPort: 8318
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -29,5 +29,6 @@ spec:
   selector:
     app: ooo
   ports:
-    - port: 8318
-      targetPort: 8318
+    - port: 80
+      targetPort: 80
+        #  type: LoadBalancer
